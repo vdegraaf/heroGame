@@ -27,9 +27,9 @@ Tips:
 - You get no points for Extra CSS that is not in the assignment (except the fuzzy feeling in your own brain)
 - If you feel you had a bad result write a reflection on your way of working in the readme of your project
 
-## Section 1. Creating the hero object
-
-**Press the 'Run the tests' button to run the automated tests** 
+## Section 1. Creating the hero object --- CHECK ---
+    
+**Press the 'Run the tests' button to run the automated tests** --- CHECK ---
 Follow the instructions in section to create the hero object.
 
 ## Section 2. Implementing the basic game logic and UI
