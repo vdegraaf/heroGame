@@ -2,7 +2,7 @@
 
 // creating a hero object
 const hero = {
-    name: '',
+    name: 'Zelda',
     heroic: true,
     inventory: [],
     health: 10,
@@ -23,6 +23,7 @@ function rest(object) {
 
 document.getElementById('inn').onclick = function (){
     hero.health = 10
+    displayStats()
 }
 
 
@@ -38,6 +39,7 @@ document.getElementById('dagger').onclick = function() {
         damage: 2
     }
     hero.inventory.push(weaponLikeObject)
+    displayStats()
 }
 
 // equipWeapon function
@@ -46,12 +48,29 @@ function equipWeapon(heroLikeObject) {
     heroLikeObject.weapon = heroLikeObject.inventory[0]
     }
 }
-const knife = {
-    type: 'knife',
-    damage: 3
-}
+
 
 // equip weapon
 document.getElementById('bag').onclick = function() {
     hero.weapon = hero.inventory[0]
+    displayStats()
 }
+
+// display stats
+// heroName, health, weapontype, weaponDamage
+function displayStats() {
+document.getElementById('heroName').innerHTML = hero.name
+document.getElementById('health').innerHTML = hero.health
+document.getElementById('weaponType').innerHTML = hero.weapon.type
+document.getElementById('weaponDamage').innerHTML = hero.weapon.damage
+}
+displayStats()
+// change name hero
+
+const typeArea = document.querySelector('.change-name-hero')
+const newName = document.querySelector('#name-hero')
+typeArea.addEventListener('submit', function(event){
+    event.preventDefault()
+    hero.name = newName.value
+    displayStats()
+})

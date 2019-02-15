@@ -9,11 +9,34 @@
 
 
   <!-- YOUR HTML HERE -->
-  <IMG src="http://capacitybc.com/Websites/capacitybuilding/images/hero%20icon.png" id='inn'>
-  <IMG src="https://www.darksword-armory.com/wp-content/uploads/2014/09/medieval-knight-dagger-1801.jpg" id='dagger'>
-    <IMG src="https://merchoid-pveiw4zwh96ot9z.netdna-ssl.com/wp-content/uploads/2016/06/Zelda-Shield-Brown-Messenger-Bag.jpg" id='bag'>
-
-
+  <div class='container'>
+      <IMG src="https://i.pinimg.com/originals/1f/ba/f2/1fbaf2d287a11791fdbe7d22bd91a380.png" id='inn'>
+      <IMG src="https://vignette.wikia.nocookie.net/zelda/images/8/80/Master_Sword_%28Ocarina_of_Time%29.png/revision/latest?cb=20090421233552" id='dagger'>
+      <IMG src="https://gamepedia.cursecdn.com/zelda_gamepedia_en/thumb/1/18/TPHD_Colossal_Wallet.png/1200px-TPHD_Colossal_Wallet.png" id='bag'>
+    </div>
+  <div class="stats-container">
+    <table class='container'>
+      <tr>
+        <th>Hero</th>
+        <th>Health</th>
+        <th>Weapon Type</th>
+        <th>Weapon Damage</th>
+      </tr>
+      <tr>
+        <th id='heroName'></th>
+        <th id='health'></th>
+        <th id='weaponType'></th>
+        <th id='weaponDamage'></th>
+      </tr>
+    </table>
+  </div>
+  <form class="change-name-hero">
+      <div>
+          <label for="name-hero">Who is your hero?</label>
+          <input type="text" id="name-hero">
+      </div>
+      <button class="submit-form" type="submit">Change Hero</button> 
+  </form>
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
   <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
   <div id="mocha"></div>

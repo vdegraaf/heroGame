@@ -1,3 +1,14 @@
+
+body{
+    background-color: wheat;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
 img {
-    width: 400px;
+    max-width: 300px;
+    height: auto;
+    margin: 10px;
 }
