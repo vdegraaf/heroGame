@@ -159,7 +159,7 @@ document.getElementById('resetGame').onclick = function() {
 // attack effect
 function attackEffect() {
     document.getElementById("attackEffect").style.visibility="visible";
-    setTimeout("hide()", 1000);  // 5 seconds
+    setTimeout("hide()", 1000);  // 1 second
 }
 function hide() {
     document.getElementById("attackEffect").style.visibility="hidden";
