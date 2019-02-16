@@ -38,12 +38,16 @@ th {
 }
 
 .players {
-    display: flex
+    display: flex;
+    justify-content: space-around;
 }
 .fighting-container{
     display: flex;
     justify-content: space-around;
     border: dashed;
+    /* background-image: url('http://dutchhumandevelopmentacademy.nl/wp-content/uploads/2016/12/6785871-dark-background.jpg');
+    background-size: 100%;
+    background-position: center left; */
 }
 .fighting-container img{
     max-width: 300px;

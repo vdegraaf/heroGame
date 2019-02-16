@@ -149,7 +149,6 @@ function gameOver(){
 }
 
 // reset game
-
 function resetGame() {
     return location.reload(true)
 }
@@ -165,3 +164,4 @@ function attackEffect() {
 function hide() {
     document.getElementById("attackEffect").style.visibility="hidden";
 }
+
