@@ -8,14 +8,14 @@ let hero = {
         {
         type: 'Bare hands',
         damage: 1,
-        image: '//vignette.wikia.nocookie.net/zelda/images/8/80/Master_Sword_%28Ocarina_of_Time%29.png/revision/latest?cb=20090421233552'
+        image: 'https://cdn.shopify.com/s/files/1/1061/1924/products/Fist_Hand_Emoji_large.png?v=1480481045'
         }
     ],
     health: 10,
     weapon: {
         type: 'Bare hands',
         damage: 2,
-        image: ""
+        image: ''
     }
 
 }
@@ -52,9 +52,36 @@ const rainbowGun = {
     image: 'https://cdn.survivorsrest.com/img/h1z1/items/rainbow-swirl-sniper-rifle.png'
 }
 
+const bomb = {
+    type: 'bomb',
+    damage: 6,
+    image: 'https://vignette.wikia.nocookie.net/videogamefan/images/3/3b/Bomb.png/revision/latest?cb=20150208074008'
+}
+
+const bow = {
+    type: 'bow',
+    damage: 5,
+    image: 'https://vignette.wikia.nocookie.net/zelda/images/5/54/Majora%27s_Mask_Bow_Hero%27s_Bow_%28Artwork%29.png/revision/latest?cb=20160601041912'
+}
+
+const bazooka = {
+    type: 'bazooka',
+    damage: 8,
+    image: 'https://wiki.teamfortress.com/w/images/thumb/7/7f/Original.png/250px-Original.png'
+}
+
+const axe = {
+    type: 'axe',
+    damage: 3,
+    image: 'https://mcishop.azureedge.net/mciassets/w_5_0010697_double-bladed-barbarian-battle-axe_550.png'
+}
+
 // creating a rest function.
 function rest(object) {
-    object.health = 10
+    object.health += 5 
+    if(object.health > 10) {
+        object.health = 10
+    }
     return object
 }
 
@@ -90,6 +117,9 @@ function equipWeaponVillan(villanLikeObject) {
 function attack(attacker, defender) {
     attackEffect()
     defender.health = defender.health- attacker.weapon.damage  
+    if(defender.health < 0){
+        defender.health = 0
+    }
     displayStats()
     gameOver()
     return defender.health
@@ -131,14 +161,28 @@ document.getElementById('inn').onclick = function() {
     displayStats()
 }
 
-// on click dagger, hero adds dagger to inventory
+// on click waepon image, hero adds weapon to inventory
 document.getElementById('dagger').onclick = function() {
     pickUpItem(hero, dagger)
 }
 
-// on click inventory, hero is equiped with first weapon
+document.getElementById('bomb').onclick = function() {
+    pickUpItem(hero, bomb)
+}
+
+document.getElementById('bow').onclick = function() {
+    pickUpItem(hero, bow)
+}
+
+// on click inverntory, hero is equiped with first weapon
 document.getElementById('bag').onclick = function() {
     currentWeaponHero++
+    console.log(currentWeaponHero)
+    console.log(hero.inventory.length)
+    if(currentWeaponHero === hero.inventory.length) {
+        currentWeaponHero = 0
+    }
+    console.log(currentWeaponHero)
     equipWeaponHero(hero)
     
 }
@@ -156,10 +200,20 @@ document.getElementById('rainbowGun').onclick = function() {
     pickUpItem(villan, rainbowGun)
 }
 
+document.getElementById('bazooka').onclick = function() {
+    pickUpItem(villan, bazooka)
+}
+
+document.getElementById('axe').onclick = function() {
+    pickUpItem(villan, axe)
+}
 
 // on click inventory, villan is equiped with first weapon
 document.getElementById('kittyBag').onclick = function() {
     currentWeaponVillan++
+    if(currentWeaponVillan === villan.inventory.length) {
+        currentWeaponVillan = 0
+    }
     equipWeaponVillan(villan)
 }
 
@@ -181,21 +235,25 @@ function displayStats() {
 displayStats()
 
 // change name hero
+const formHero = document.querySelector('.change-name-hero')
 const typeArea = document.querySelector('.change-name-hero')
 const newName = document.querySelector('#name-hero')
 typeArea.addEventListener('submit', function(event){
     event.preventDefault()
     hero.name = newName.value
     displayStats()
+    formHero.reset()
 })
 
 // change name villan
+const formVillan = document.querySelector('.change-name-villan')
 const villanTypeArea = document.querySelector('.change-name-villan')
 const villanNewName = document.querySelector('#name-villan')
 villanTypeArea.addEventListener('submit', function(event){
     event.preventDefault()
     villan.name = villanNewName.value
     displayStats()
+    formVillan.reset()
 })
 
 // on click hero attack
