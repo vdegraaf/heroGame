@@ -265,5 +265,13 @@ document.getElementById('villanAttack').onclick = function() {
     attack(villan, hero)
 }
 
-
-
+// randomizer for start
+function startRandom(){
+    let beginner = Math.floor(Math.random()*2)
+    if(beginner === 0){
+        alert('Hero may start the game')
+    } else alert('Villan may start the game')
+    }
+document.getElementById('start').onclick = function() {
+    startRandom()
+}

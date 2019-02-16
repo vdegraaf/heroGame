@@ -9,6 +9,10 @@
 
 
   <!-- YOUR HTML HERE -->
+  <header>
+  <h1>CHALLENGE YOUR VILLAN</h1>
+  <h2>a multiplayer game by <b>Vincent de Graaf</b></h2>
+</header>
 <section class='players'>
 <div id="hero-container">
   <div class='container'>
@@ -34,7 +38,7 @@
   </div>
   <form class="change-name-hero">
       <div>
-          <label for="name-hero">Who is your hero?</label>
+          <label for="name-hero">Who is your hero name?</label>
           <input type="text" id="name-hero">
       </div>
       <button class="submit-form" type="submit">Change Hero</button> 
@@ -65,7 +69,7 @@
   </div>
   <form class="change-name-villan">
       <div>
-          <label for="name-villan">Who is your favorite villan?</label>
+          <label for="name-villan">What your villan name?</label>
           <input type="text" id="name-villan">
       </div>
       <button class="submit-form" type="submit">Change Villan</button> 
@@ -91,7 +95,28 @@
   <img src="/Users/Vincent/codaisseur/week-1/homework-week1/images/hello-kitty-attack.png" alt="villan attack" id='villanAttack'>
   </div>
 </div>
+<div class='buttons'>
+<button id='start'>Start</button>
 <button id='resetGame'>Play Again</button>
+</div>
+<div class='game-rules'>
+  <h2><b>GAME RULES</b></h2>
+<ol>
+  <li>Add player’s name</li>
+  <li>Press ‘Start’ to see who may begin</li>
+  <li>Every turn a player can choose one of the following options
+    </li>
+    <ol>
+      <li><b>Pickup new weapon:</b> a player can add a new weapon to his/her inventory. Hero's and Villan's have different options. Both have one default weapon</li>
+      <li><b>Attack:</b> click on your player in the Arena to attack your enemy with your Current Weapon (It is possible to iterate through your inventory to choose a different weapon if available.)
+        </li>
+      <li><b>Rest:</b> click on your player rest-function to gain 5 health points
+        </li>
+    </ol>
+  <li>When a player’s health hit 0 the other player has won the game. Click ‘Play Again’ to start a new game.</li>
+</ol>
+</div>
+
 
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
   <button onclick="mocha.checkLeaks(); mocha.run();" style="display: none">Run the tests!</button>
