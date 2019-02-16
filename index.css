@@ -68,3 +68,12 @@ form {
     display: block;
     margin: auto;
 }
+
+.weapons {
+    display: flex;
+    
+}
+.weapon-box {
+    width: 50%
+    
+}
