@@ -12,3 +12,7 @@ img {
     height: auto;
     margin: 10px;
 }
+
+th {
+    padding: 5px 30px;
+}

@@ -45,17 +45,16 @@ document.getElementById('dagger').onclick = function() {
 
 
 // equipWeapon function
+
 function equipWeapon(heroLikeObject) {
     if(heroLikeObject.inventory[0]){
-    heroLikeObject.weapon = heroLikeObject.inventory[0]
+        heroLikeObject.weapon = heroLikeObject.inventory[0]
+        }
+        displayStats()
     }
-}
 
-
-// equip weapon
 document.getElementById('bag').onclick = function() {
-    hero.weapon = hero.inventory[0]
-    displayStats()
+    equipWeapon(hero)
 }
 
 // display stats
