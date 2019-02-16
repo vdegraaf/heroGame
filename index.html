@@ -9,6 +9,8 @@
 
 
   <!-- YOUR HTML HERE -->
+<section class='players'>
+<div id="hero-container">
   <div class='container'>
       <IMG src="https://i.pinimg.com/originals/1f/ba/f2/1fbaf2d287a11791fdbe7d22bd91a380.png" id='inn'>
       <IMG src="https://vignette.wikia.nocookie.net/zelda/images/8/80/Master_Sword_%28Ocarina_of_Time%29.png/revision/latest?cb=20090421233552" id='dagger'>
@@ -37,8 +39,50 @@
       </div>
       <button class="submit-form" type="submit">Change Hero</button> 
   </form>
+</div>
+
+<div id="villan-container">
+  <div class='container'>
+      <IMG src="https://seeklogo.com/images/H/hello-kitty-logo-354D6628E7-seeklogo.com.png" id='villanRest'>
+      <IMG src="https://cdn.survivorsrest.com/img/h1z1/items/rainbow-swirl-sniper-rifle.png" id='rainbowGun'>
+      <IMG src="http://img.artsadd.com/data/user/design/20160704/67B6640A8ADC6D4D8EDCA64E7C6C2BE9_500x500.png" id='kittyBag'>
+    </div>
+  <div class="stats-container">
+    <table class='container table'>
+      <tr>
+        <th>Villan</th>
+        <th>Health</th>
+        <th>Weapon Type</th>
+        <th>Weapon Damage</th>
+      </tr>
+      <tr>
+        <th id='villanName'></th>
+        <th id='villanHealth'></th>
+        <th id='villanWeaponType'></th>
+        <th id='villanWeaponDamage'></th>
+      </tr>
+    </table>
+  </div>
+  <form class="change-name-villan">
+      <div>
+          <label for="name-villan">Who is your favorite villan?</label>
+          <input type="text" id="name-villan">
+      </div>
+      <button class="submit-form" type="submit">Change Villan</button> 
+  </form>
+</div>
+</section>
+<div class='fighting-container'>
+  <div class='fighting'>
+  <img src="https://vignette.wikia.nocookie.net/nintendo/images/6/64/SpinAttack.gif/revision/latest?cb=20071224173358&path-prefix=en" alt="Zelda attack" id='heroAttack'>
+  <img src="http://bang.tv/wp-content/themes/bang/assets/images/bang-tv.png" id="attackEffect">
+  <img src="/Users/Vincent/codaisseur/week-1/homework-week1/images/hello-kitty-attack.png" alt="villan attack" id='villanAttack'>
+  </div>
+</div>
+<button id='resetGame'>Play Again</button>
+
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
-  <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
+  <button onclick="mocha.checkLeaks(); mocha.run();" style="display: none">Run the tests!</button>
   <div id="mocha"></div>
 
   <script src="https://unpkg.com/chai@4.1.2/chai.js"></script>
