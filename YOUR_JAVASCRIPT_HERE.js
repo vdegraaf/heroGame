@@ -14,7 +14,7 @@ const hero = {
 }
 
 
-// creating a rest function
+// creating a rest function. On click, hero's health back to 10
 
 function rest(object) {
     object.health = 10
@@ -74,3 +74,4 @@ typeArea.addEventListener('submit', function(event){
     hero.name = newName.value
     displayStats()
 })
+
