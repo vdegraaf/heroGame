@@ -1,14 +1,30 @@
 
 body{
     background-color: wheat;
+    margin: 8px;
 }
 .container {
     display: flex;
+    /* flex-direction: column; */
     justify-content: space-around;
     align-items: baseline;
+    margin: 10px
 }
+
+#hero-container {
+    background-color: lightgreen;
+    margin: 10px;
+    border-radius: 5px;
+}
+#villan-container {
+    background-color: purple;
+    color: pink;
+    margin: 10px;
+    border-radius: 5px;
+}
+
 img {
-    max-width: 300px;
+    max-width: 100px;
     height: auto;
     margin: 10px;
 }
@@ -19,4 +35,32 @@ th {
 
 #attackEffect {
     visibility: hidden
+}
+
+.players {
+    display: flex
+}
+.fighting-container{
+    display: flex;
+    justify-content: space-around;
+    border: dashed;
+}
+.fighting-container img{
+    max-width: 300px;
+    height: auto;
+    margin: 30px;
+}
+
+#villan-container .table {
+    color: pink
+}
+
+form {
+    justify-content: center;
+    display: grid;
+}
+
+#resetGame {
+    display: block;
+    margin: auto;
 }

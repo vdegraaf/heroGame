@@ -7,7 +7,7 @@ let hero = {
     inventory: [],
     health: 10,
     weapon: {
-        type: '',
+        type: 'Bare hands',
         damage: 2
     }
 
@@ -20,7 +20,7 @@ let villan = {
     inventory: [],
     health: 10,
     weapon: {
-        type: '',
+        type: 'Bare paws',
         damage: 2
     }
 
