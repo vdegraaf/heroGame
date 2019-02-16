@@ -13,6 +13,11 @@ const hero = {
 
 }
 
+// available weapons
+const dagger = {
+    type: 'dagger',
+    damage: 2
+    }
 
 // creating a rest function. On click, hero's health back to 10
 
@@ -29,17 +34,15 @@ document.getElementById('inn').onclick = function (){
 
 // pickup items function --> works fine but error (of Rein) says "global leak detected: dagger"
 
-function pickUpItem (heroLikeObject, object) {
-    heroLikeObject.inventory.push(object)
+
+console.log(hero)
+function pickUpItem (heroLikeObject, weaponLikeObject) {
+    heroLikeObject.inventory.push(weaponLikeObject)
+    displayStats()
 }
 
 document.getElementById('dagger').onclick = function() {
-    weaponLikeObject = {
-        type: 'dagger',
-        damage: 2
-    }
-    hero.inventory.push(weaponLikeObject)
-    displayStats()
+    pickUpItem(hero, dagger)
 }
 
 // equipWeapon function
