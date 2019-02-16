@@ -16,3 +16,7 @@ img {
 th {
     padding: 5px 30px;
 }
+
+#attackEffect {
+    visibility: hidden
+}
