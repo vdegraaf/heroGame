@@ -9,20 +9,24 @@
 
 
   <!-- YOUR HTML HERE -->
+  <header>
+  <h1>CHALLENGE YOUR VILLAN</h1>
+  <h2>a multiplayer game by <b>Vincent de Graaf</b></h2>
+</header>
 <section class='players'>
 <div id="hero-container">
   <div class='container'>
       <IMG src="https://i.pinimg.com/originals/1f/ba/f2/1fbaf2d287a11791fdbe7d22bd91a380.png" id='inn'>
-      <IMG src="https://vignette.wikia.nocookie.net/zelda/images/8/80/Master_Sword_%28Ocarina_of_Time%29.png/revision/latest?cb=20090421233552" id='dagger'>
+      <IMG src="https://cdn.shopify.com/s/files/1/1061/1924/products/Fist_Hand_Emoji_large.png?v=1480481045" id='currentWeaponHero'>
       <IMG src="https://gamepedia.cursecdn.com/zelda_gamepedia_en/thumb/1/18/TPHD_Colossal_Wallet.png/1200px-TPHD_Colossal_Wallet.png" id='bag'>
     </div>
   <div class="stats-container">
     <table class='container'>
-      <tr>
-        <th>Hero</th>
-        <th>Health</th>
-        <th>Weapon Type</th>
-        <th>Weapon Damage</th>
+      <tr >
+        <th class='type'>Hero</th>
+        <th class='type'>Health</th>
+        <th class='type'>Current Weapon</th>
+        <th class='type'>Weapon Damage</th>
       </tr>
       <tr>
         <th id='heroName'></th>
@@ -34,7 +38,7 @@
   </div>
   <form class="change-name-hero">
       <div>
-          <label for="name-hero">Who is your hero?</label>
+          <label for="name-hero">Who is your hero name?</label>
           <input type="text" id="name-hero">
       </div>
       <button class="submit-form" type="submit">Change Hero</button> 
@@ -44,16 +48,16 @@
 <div id="villan-container">
   <div class='container'>
       <IMG src="https://seeklogo.com/images/H/hello-kitty-logo-354D6628E7-seeklogo.com.png" id='villanRest'>
-      <IMG src="https://cdn.survivorsrest.com/img/h1z1/items/rainbow-swirl-sniper-rifle.png" id='rainbowGun'>
+      <IMG src="https://pawsofcoronado.org/wp-content/uploads/2016/01/cropped-favicon.png" id='currentWeaponVillan'>
       <IMG src="http://img.artsadd.com/data/user/design/20160704/67B6640A8ADC6D4D8EDCA64E7C6C2BE9_500x500.png" id='kittyBag'>
     </div>
   <div class="stats-container">
     <table class='container table'>
       <tr>
-        <th>Villan</th>
-        <th>Health</th>
-        <th>Weapon Type</th>
-        <th>Weapon Damage</th>
+        <th class='type'>Villan</th>
+        <th class='type'>Health</th>
+        <th class='type'>Current Weapon</th>
+        <th class='type'>Weapon Damage</th>
       </tr>
       <tr>
         <th id='villanName'></th>
@@ -65,12 +69,24 @@
   </div>
   <form class="change-name-villan">
       <div>
-          <label for="name-villan">Who is your favorite villan?</label>
+          <label for="name-villan">What your villan name?</label>
           <input type="text" id="name-villan">
       </div>
       <button class="submit-form" type="submit">Change Villan</button> 
   </form>
 </div>
+</section>
+<section class='weapons'>
+  <div id='hero-weapons' class='weapon-box'>
+    <IMG src="https://vignette.wikia.nocookie.net/zelda/images/8/80/Master_Sword_%28Ocarina_of_Time%29.png/revision/latest?cb=20090421233552" id='dagger'>
+    <img src="https://vignette.wikia.nocookie.net/videogamefan/images/3/3b/Bomb.png/revision/latest?cb=20150208074008" id='bomb'>
+    <img src="https://vignette.wikia.nocookie.net/zelda/images/5/54/Majora%27s_Mask_Bow_Hero%27s_Bow_%28Artwork%29.png/revision/latest?cb=20160601041912" id="bow">
+  </div>
+    <div id='villan-weapons' class='weapon-box'>
+        <IMG src="https://cdn.survivorsrest.com/img/h1z1/items/rainbow-swirl-sniper-rifle.png" id='rainbowGun'>
+        <img src="https://wiki.teamfortress.com/w/images/thumb/7/7f/Original.png/250px-Original.png" id="bazooka">
+          <img src="https://mcishop.azureedge.net/mciassets/w_5_0010697_double-bladed-barbarian-battle-axe_550.png" id="axe">
+      </div>
 </section>
 <div class='fighting-container'>
   <div class='fighting'>
@@ -79,7 +95,28 @@
   <img src="/Users/Vincent/codaisseur/week-1/homework-week1/images/hello-kitty-attack.png" alt="villan attack" id='villanAttack'>
   </div>
 </div>
+<div class='buttons'>
+<button id='start'>Start</button>
 <button id='resetGame'>Play Again</button>
+</div>
+<div class='game-rules'>
+  <h2><b>GAME RULES</b></h2>
+<ol>
+  <li>Add player’s name</li>
+  <li>Press ‘Start’ to see who may begin</li>
+  <li>Every turn a player can choose one of the following options
+    </li>
+    <ol>
+      <li><b>Pickup new weapon:</b> a player can add a new weapon to his/her inventory. Hero's and Villan's have different options. Both have one default weapon</li>
+      <li><b>Attack:</b> click on your player in the Arena to attack your enemy with your Current Weapon (It is possible to iterate through your inventory to choose a different weapon if available.)
+        </li>
+      <li><b>Rest:</b> click on your player rest-function to gain 5 health points
+        </li>
+    </ol>
+  <li>When a player’s health hit 0 the other player has won the game. Click ‘Play Again’ to start a new game.</li>
+</ol>
+</div>
+
 
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
   <button onclick="mocha.checkLeaks(); mocha.run();" style="display: none">Run the tests!</button>
