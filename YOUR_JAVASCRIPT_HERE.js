@@ -26,16 +26,14 @@ function rest(object) {
     return object
 }
 
-document.getElementById('inn').onclick = function (){
-    hero.health = 10
+document.getElementById('inn').onclick = function() {
+    rest(hero)
     displayStats()
 }
 
 
 // pickup items function --> works fine but error (of Rein) says "global leak detected: dagger"
 
-
-console.log(hero)
 function pickUpItem (heroLikeObject, weaponLikeObject) {
     heroLikeObject.inventory.push(weaponLikeObject)
     displayStats()
@@ -44,6 +42,7 @@ function pickUpItem (heroLikeObject, weaponLikeObject) {
 document.getElementById('dagger').onclick = function() {
     pickUpItem(hero, dagger)
 }
+
 
 // equipWeapon function
 function equipWeapon(heroLikeObject) {
