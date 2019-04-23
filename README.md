@@ -1,3 +1,6 @@
+**Very first individual assignment for the Codaisseur Academy. Merging newly gained knowledge of HTML, CSS and JavaScript.**
+
+
 # Beginner Bootcamp Homework
 
 Hello beginner bootcampers. Here is your first formal homework  assignment!
